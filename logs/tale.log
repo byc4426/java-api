@@ -1,0 +1,35 @@
+2018-11-07 16:33:21:829 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: jdk.version    => 1.8.0_192
+2018-11-07 16:33:21:832 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.dir       => E:\JavaBlade-master\api_project
+2018-11-07 16:33:21:832 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: java.io.tmpdir => C:\Users\ADMINI~1\AppData\Local\Temp\
+2018-11-07 16:33:21:832 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.timezone  => Asia/Shanghai
+2018-11-07 16:33:21:832 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: file.encoding  => UTF-8
+2018-11-07 16:33:21:832 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: classpath      => E:\JavaBlade-master\api_project\target\classes
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/login
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/note/delete
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/doc
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/note/list
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/user/register
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/user/login
+2018-11-07 16:33:21:937 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/note/update
+2018-11-07 16:33:21:938 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/user/test
+2018-11-07 16:33:21:938 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/note/add
+2018-11-07 16:33:21:940 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Register bean: [com.huruwo.demo.config.DbConfig@5eb6b8b1, com.blade.Environment@11a56b83, com.huruwo.demo.config.DbConfig@5eb6b8b1, com.huruwo.demo.controller.NoteController@23e617d2, com.huruwo.demo.config.TplConfig@284397b8, com.huruwo.demo.controller.IndexController@435bd131, com.huruwo.demo.controller.UserController@791853aa]
+2018-11-07 16:33:21:946 ERROR - [ _(:3」∠)_ ] c.z.h.HikariConfig        | Failed to load driver class com.mysql.jdbc.Driver from HikariConfig class classloader sun.misc.Launcher$AppClassLoader@18b4aac2
+2018-11-07 16:33:21:946 ERROR - [ _(:3」∠)_ ] c.b.Blade                 | Start blade failed
+java.lang.RuntimeException: Failed to load driver class com.mysql.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:529)
+	at com.huruwo.demo.config.DbConfig.processor(DbConfig.java:22)
+	at com.blade.server.netty.NettyServer.lambda$initIoc$2(NettyServer.java:124)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:352)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at com.blade.server.netty.NettyServer.initIoc(NettyServer.java:124)
+	at com.blade.server.netty.NettyServer.start(NettyServer.java:85)
+	at com.blade.Blade.lambda$start$1(Blade.java:683)
+	at java.lang.Thread.run(Thread.java:748)
