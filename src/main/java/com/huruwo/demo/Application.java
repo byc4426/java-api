@@ -6,5 +6,6 @@ import com.huruwo.demo.middleware.AuthMiddleware;
 public class Application {
     public static void main(String[] args) {
         Blade.of().listen(880).use(new AuthMiddleware()).start(Application.class, args);
+
     }
 }
